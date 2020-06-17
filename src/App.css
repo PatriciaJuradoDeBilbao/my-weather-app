@@ -1,38 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700;800;900&family=Questrial&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Questrial', sans-serif;
+}
+
 .App {
+  background-image: url("img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  transition: 0.2s ease;
+}
+
+.App.hot {
+  background-image: linear-gradient( 135deg, #FFAA85 10%, #B3315F 100%);;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.2s ease;
+}
+
+main {
+  min-height: 100vh;
+  padding: 25px;
+}
+
+.title {
+  margin-top: 100px;
+  text-align: center;
+  color: rgb(21, 89, 121);
+  font-size: 2.5em;
+}
+
+.text {
+  text-align: center;
+  color: rgb(20, 88, 119);
+  font-size: 1.3em;
+  margin: 150px 0 20px 0;
+  font-weight: 500;
+}
+
+.App.cold {
+  background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.2s ease;
+}
+
+.search-container {
+  width: 100%;
+  margin: 0 0 75px;
+}
+
+.search-bar {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Questrial', sans-serif;
+  display: flex;
+  color: black;
+  font-size: 15px;
+  width: 100%;
+  padding: 1.2em;
+  border: none;
+  outline: none;
+  appearance: none;
+  background: rgba(255, 255, 255);
+  box-shadow: 2px 2px rgb(0, 0, 0, 0.25);
+  transition: 0.4s ease;
+
+}
+
+.search-container .search-bar:focus {
+  background-color: white;
+}
+
+
+.location-container {
+  color: #f2f2f2;
+  font-size: 1.5em;
+  font-weight: 500;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.location-container .date {
+  color: #f2f2f2;
+  font-size: .8em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.weather-container {
+  text-align: center;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.weather-container .temperature {
+  color: #f2f2f2;
+  position: relative;
+  display: inline-block;
+  font-size: 6em;
+  font-weight:700;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-type {
+  color: #f2f2f2;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-feels {
+  color: #f2f2f2;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.weather-container .humidity {
+  color: #f2f2f2;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
 }
